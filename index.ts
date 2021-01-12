@@ -8,12 +8,12 @@ app.get("/", (req, res) => {
   );
 });
 
-const dateForStartTime = new Date();
-
-app.get("/start-time", (req, res) => {
+let hitCount = 0;
+app.get("/count-hits", (req, res) => {
+  hitCount += 1;
   res.json({
-    message: `The current date is ${dateForStartTime.toTimeString()}`,
-    utc: dateForStartTime.toUTCString(),
+    message: "Thanks, we've registered that as another hit",
+    currentTotal: hitCount,
   });
 });
 
@@ -23,6 +23,14 @@ app.get("/current-time", (req, res) => {
   res.json({
     message: `The current date is ${dateOfRequestHandling.toTimeString()}`,
     utc: dateOfRequestHandling.toUTCString(),
+  });
+});
+
+const dateForStartTime = new Date();
+app.get("/start-time", (req, res) => {
+  res.json({
+    message: `The current date is ${dateForStartTime.toTimeString()}`,
+    utc: dateForStartTime.toUTCString(),
   });
 });
 
