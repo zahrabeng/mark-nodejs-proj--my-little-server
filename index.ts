@@ -8,21 +8,21 @@ app.get("/", (req, res) => {
   );
 });
 
-const currentDate = new Date();
+const dateForStartTime = new Date();
 
 app.get("/start-time", (req, res) => {
   res.json({
-    message: `The current date is ${currentDate.toTimeString()}`,
-    utc: currentDate.toUTCString(),
+    message: `The current date is ${dateForStartTime.toTimeString()}`,
+    utc: dateForStartTime.toUTCString(),
   });
 });
 
 app.get("/current-time", (req, res) => {
-  const currentDate = new Date();
+  const dateOfRequestHandling = new Date();
 
   res.json({
-    message: `The current date is ${currentDate.toTimeString()}`,
-    utc: currentDate.toUTCString(),
+    message: `The current date is ${dateOfRequestHandling.toTimeString()}`,
+    utc: dateOfRequestHandling.toUTCString(),
   });
 });
 
