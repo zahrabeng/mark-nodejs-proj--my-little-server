@@ -1,4 +1,5 @@
 import express from "express";
+import dummyData from "./dummy.json";
 
 const app = express();
 
@@ -42,6 +43,13 @@ app.get("/start-time", (req, res) => {
     message: `The current date is ${dateForStartTime.toTimeString()}`,
     utc: dateForStartTime.toUTCString(),
     countedAsHit: false,
+  });
+});
+
+app.get("/users", (req, res) => {
+  res.json({
+    message: "Loading JSON data:",
+    data: dummyData,
   });
 });
 
