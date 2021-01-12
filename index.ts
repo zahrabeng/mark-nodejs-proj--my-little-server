@@ -9,11 +9,20 @@ app.get("/", (req, res) => {
 });
 
 let hitCount = 0;
-app.get("/count-hits", (req, res) => {
+app.get("/hits", (req, res) => {
   hitCount += 1;
   res.json({
-    message: "Thanks, we've registered that as another hit",
+    message: "We've registered your hit!",
     currentTotal: hitCount,
+    countedAsHit: true,
+  });
+});
+
+app.get("/hits-stealth", (req, res) => {
+  res.json({
+    message: "Oooh, you ninja. We didn't count that hit.",
+    currentTotal: hitCount,
+    countedAsHit: false,
   });
 });
 
@@ -23,6 +32,7 @@ app.get("/current-time", (req, res) => {
   res.json({
     message: `The current date is ${dateOfRequestHandling.toTimeString()}`,
     utc: dateOfRequestHandling.toUTCString(),
+    countedAsHit: false,
   });
 });
 
@@ -31,6 +41,7 @@ app.get("/start-time", (req, res) => {
   res.json({
     message: `The current date is ${dateForStartTime.toTimeString()}`,
     utc: dateForStartTime.toUTCString(),
+    countedAsHit: false,
   });
 });
 
