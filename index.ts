@@ -2,27 +2,19 @@ import express from "express";
 import dummyData from "./dummy.json";
 
 const app = express();
+const serverStartDate = new Date();
+let serverHitCount = 0;
 
 app.get("/", (req, res) => {
   res.send(
-    "This route isn't very interesting, sorry. \nTry hitting localhost:4000/current-time, localhost:4000/start-time"
+    "This route isn't very interesting, sorry. \nTry hitting localhost:4000/creation-time, localhost:4000/start-time or the other routes listed in index.ts"
   );
 });
 
-let hitCount = 0;
-app.get("/hits", (req, res) => {
-  hitCount += 1;
+app.get("/creation-time", (req, res) => {
   res.json({
-    message: "We've registered your hit!",
-    currentTotal: hitCount,
-    countedAsHit: true,
-  });
-});
-
-app.get("/hits-stealth", (req, res) => {
-  res.json({
-    message: "Oooh, you ninja. We didn't count that hit.",
-    currentTotal: hitCount,
+    message: `The server was started at ${serverStartDate.toTimeString()}`,
+    utc: serverStartDate.toUTCString(),
     countedAsHit: false,
   });
 });
@@ -37,19 +29,28 @@ app.get("/current-time", (req, res) => {
   });
 });
 
-const dateForStartTime = new Date();
-app.get("/start-time", (req, res) => {
+app.get("/hits", (req, res) => {
+  serverHitCount += 1;
   res.json({
-    message: `The current date is ${dateForStartTime.toTimeString()}`,
-    utc: dateForStartTime.toUTCString(),
+    message: "We've registered your hit!",
+    currentTotal: serverHitCount,
+    countedAsHit: true,
+  });
+});
+
+app.get("/hits-stealth", (req, res) => {
+  res.json({
+    message: "Oooh, you ninja. We didn't count that hit.",
+    currentTotal: serverHitCount,
     countedAsHit: false,
   });
 });
 
 app.get("/users", (req, res) => {
   res.json({
-    message: "Loading JSON data:",
+    message: "Loaded dummy JSON data:",
     data: dummyData,
+    countedAsHit: false,
   });
 });
 
