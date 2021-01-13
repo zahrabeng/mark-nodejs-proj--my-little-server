@@ -1,5 +1,5 @@
 import express from "express";
-import dummyData from "./dummy.json";
+import ponyData from "./ponies.json";
 
 const app = express();
 const serverStartDate = new Date();
@@ -49,7 +49,7 @@ app.get("/hits-stealth", (req, res) => {
 app.get("/users", (req, res) => {
   res.json({
     message: "Loaded dummy JSON data:",
-    data: dummyData,
+    data: ponyData,
     countedAsHit: false,
   });
 });
