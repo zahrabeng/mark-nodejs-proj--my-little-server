@@ -1,5 +1,5 @@
 ---
-module: nodejs
+module: mark-nodejs
 
 level: 1
 
@@ -26,31 +26,33 @@ We're now going to run your first server.
 - Send back a JSON response in an Express route handler
 - Identify when a route handler function is executed
 
-## Exercise 1: Installing and demoing
+## Exercise 1: Installing and running
 
-**Success criterion:** you can view the React web app on `localhost:3000`
+**Success criterion:** you can view evidence your server is running at `localhost:3000`
 
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
 ```bash
-cd ~/Development/Academy # or wherever you're organising everything
-git clone https://github.com/WeAreAcademy/mark-react-proj--meet-react.git
+cd ~/Development/Academy/Mark/fundamentals # or wherever you're organising everything
+git clone https://github.com/WeAreAcademy/my-little-server.git my-little-server
 ```
 
 Then, change into the new directory and install the files:
 
 ```bash
-cd mark-react-proj--meet-react
+cd my-little-server
 yarn
 ```
 
-Finally, run your first React app!
+Finally, run your first Express server!
 
 ```bash
 yarn start
 ```
 
-The `start` script is configured such that the app will run by default on your local machine at `localhost:3000`, which should open up in your browser automatically (but which you can also navigate to).
+The `start` script is configured such that the Express server will run by default on your local machine at `localhost:4000`.
+
+You will need to manually confirm this through visiting `localhost:4000` in your browser.
 
 ## Exercise 2: Reading, understanding and documenting
 
