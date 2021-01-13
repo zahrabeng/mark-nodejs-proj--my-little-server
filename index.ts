@@ -1,5 +1,6 @@
 import express from "express";
 import ponyData from "./ponies.json";
+import { seasonOneEpisodes } from "../episodes";
 
 const app = express();
 const serverStartDate = new Date();
@@ -7,7 +8,7 @@ let serverHitCount = 0;
 
 app.get("/", (req, res) => {
   res.send(
-    "This is the default path - and it isn't very interesting, sorry. \nTry visiting localhost:4000/creation-time, localhost:4000/start-time or the other routes listed in index.ts"
+    "This is the default path - and it isn't very interesting, sorry. \nTry visiting localhost:4000/creation-time, localhost:4000/current-time"
   );
 });
 
@@ -32,7 +33,7 @@ app.get("/current-time", (req, res) => {
 app.get("/hits", (req, res) => {
   serverHitCount += 1;
   res.json({
-    message: "We've registered your hit!",
+    note: "We've registered your hit!",
     currentTotal: serverHitCount,
     countedAsHit: true,
   });
@@ -40,17 +41,33 @@ app.get("/hits", (req, res) => {
 
 app.get("/hits-stealth", (req, res) => {
   res.json({
-    message: "Oooh, you ninja. We didn't count that hit.",
+    note: "Oooh, you ninja. We didn't count that hit.",
     currentTotal: serverHitCount,
     countedAsHit: false,
   });
 });
 
-app.get("/users", (req, res) => {
+app.get("/ponies", (req, res) => {
   res.json({
     message: "Loaded dummy JSON data:",
     data: ponyData,
     countedAsHit: false,
+  });
+});
+
+app.get("/season-one", (req, res) => {
+  res.json({
+    countedAsHit: false,
+    data: seasonOneEpisodes,
+  });
+});
+
+app.get("/season-one/random", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * seasonOneEpisodes.length);
+
+  res.json({
+    countedAsHit: false,
+    data: seasonOneEpisodes[randomIndex],
   });
 });
 
