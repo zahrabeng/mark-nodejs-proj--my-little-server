@@ -7,7 +7,7 @@ let serverHitCount = 0;
 
 app.get("/", (req, res) => {
   res.send(
-    "This route isn't very interesting, sorry. \nTry hitting localhost:4000/creation-time, localhost:4000/start-time or the other routes listed in index.ts"
+    "This is the default path - and it isn't very interesting, sorry. \nTry visiting localhost:4000/creation-time, localhost:4000/start-time or the other routes listed in index.ts"
   );
 });
 

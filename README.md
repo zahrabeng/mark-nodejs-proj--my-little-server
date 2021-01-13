@@ -18,7 +18,7 @@ tags:
 
 > This is part of Academy's [technical curriculum for **The Mark**](https://github.com/WeAreAcademy/curriculum-mark). All parts of that curriculum, including this project, are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
-We're now going to run your first server.
+We're now going to run your first server and play around with a few existing **endpoints** that it has.
 
 ## Learning Outcomes
 
@@ -28,7 +28,7 @@ We're now going to run your first server.
 
 ## Exercise 1: Installing and running
 
-**Success criterion:** you can view evidence your server is running at `localhost:3000`
+**Success criterion:** you can view evidence your server is running at `localhost:4000`
 
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
@@ -52,11 +52,11 @@ yarn start
 
 The `start` script is configured such that the Express server will run by default on your local machine at `localhost:4000`.
 
-You will need to manually confirm this through visiting `localhost:4000` in your browser.
+You will need to manually confirm this through visiting `localhost:4000` in your browser. You can also visit some different endpoints which are defined, e.g. `localhost:4000/current-time`.
 
 ## Exercise 2: Reading, understanding and documenting
 
-**Success criterion:** a document which outlines how you think this React app works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
+**Success criterion:** a document which outlines how you think this Express server works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
 
 (N.B.: The _correctness_ of your theory is **much less important** than the _process_ of forming this document. [Forming a prediction, and then discovering it was wrong, is an effective way to learn](https://www.sciencedirect.com/science/article/abs/pii/S0959475217303468)!)
 
@@ -65,17 +65,7 @@ You will need to manually confirm this through visiting `localhost:4000` in your
 3. Experiment with changing things
 4. Produce a narrative document
 
-> ⚠️ For now, you will have to refresh `localhost:3000` when you make changes to see them take effect. _(Instructor note: CRA hot reload / fast refresh seems not to be able to watch code inside `index.tsx`.)_
-
-A good narrative document for this game would explain how `public/index.html` and `src/index.tsx` seem to be interacting to produce the HTML that gets rendered in your browser. A great narrative document would demonstrate this through code snippets and screenshots which show how changes you have made in the code lead to changes in the browser that are consistent with your theory.
-
-> ⛏️ You may find it useful to use the **Inspector** in your browser developer tools to explore the rendered HTML elements. (Search online for how to do this if you are unsure.)
-
-Things you should try to cover include:
-
-- What's the importance of the `document.getElementById` argument? What happens if you change it?
-- When you run the app, why do you see more things than are returned by your React app?
-- What's the role of the `{` in TSX code?
+A good narrative document for this game would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
 
 ## Exercise 3: Writing your own React component
 
