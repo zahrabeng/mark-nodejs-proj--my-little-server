@@ -67,15 +67,23 @@ You will need to manually confirm this through visiting `localhost:4000` in your
 
 A good narrative document for this game would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
 
-## Exercise 3: Writing your own React component
+(Some routes will give you back the same response each time, and others won't. Why is that?)
 
-> 🎯 **Success criterion:** a custom React component, `AboutMe`, which renders HTML to the browser at `localhost:3000`.
+## Exercise 3: Writing your own Express route
 
-Now it's time to look at `AboutMe`. This is a currently relatively minimal React component.
+> 🎯 **Success criterion:** you can visit `localhost:5050/hello-world`, `localhost:5050/ponies/random` and `localhost:5050/history` in the browser, with the expected behaviour (detailed below).
 
-Can you populate it with some information about yourself (a short bio, maybe a CV-esque thing) and render the component through your React app?
+### `/hello-world`
 
-(It's up to you as to whether you replace other bits of HTML or the other component, `MyFirstReactComponent`; all that's required is that you can see your component's rendered HTML. Don't forget that you'll need to refresh when you make changes!)
+Says hello world
+
+### `/ponies/random`
+
+Shows a random pony
+
+### `/history`
+
+Shows a list of which routes have been hit in chronological order
 
 ## Exercise 4: Check your understanding
 
