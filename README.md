@@ -25,6 +25,9 @@ We're now going to run your first server and play around with a few existing **e
 - Run an Express server locally
 - Send back a JSON response in an Express route handler
 - Identify when a route handler function is executed
+- Test GET requests in the browser
+- Test GET requests in Postman
+- Test GET requests with supertest
 
 ## Exercise 1: Installing and running
 
@@ -54,6 +57,8 @@ The `start` script is configured such that the Express server will run by defaul
 
 You will need to manually confirm this through visiting `localhost:4000` in your browser. You can also visit some different endpoints which are defined, e.g. `localhost:4000/current-time`.
 
+You can close the server with `Ctrl + C` in the terminal where it is running. (If the server is not running - either because you have not yet started it or you have closed it - then trying to access `localhost:4000` will give you a connection failure.)
+
 ## Exercise 2: Reading, understanding and documenting
 
 **Success criterion:** a document which outlines how you think this Express server works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
@@ -69,9 +74,28 @@ A good narrative document for this game would explain what code gets executed wh
 
 (Some routes will give you back the same response each time, and others won't. Why is that?)
 
-## Exercise 3: Writing your own Express route
+## Exercise 3: Viewing in Postman
 
-> 🎯 **Success criterion:** you can visit `localhost:5050/hello-world`, `localhost:5050/ponies/random` and `localhost:5050/history` in the browser, with the expected behaviour (detailed below).
+> 🎯 **Success criterion:** you can make GET requests to all endpoints in `server.ts` via Postman
+
+[Postman](https://www.postman.com/) is a commonly-used tool for supporting server endpoint development (sometimes referred to as API development).
+
+### Downloading Postman
+
+If you are on Windows or MacOS, you can [download the desktop app straightforwardly from the Postman website](https://www.postman.com/downloads/).
+
+If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), you will need to:
+
+1. Install `snap` with [a (long) one-liner](https://www.bonusbits.com/wiki/HowTo:Install_Snap_on_Amazon_Linux_Workspace#One_Liner)
+2. Run `sudo snap install postman`
+
+### Sending a get request
+
+## Exercise 4: Writing your own Express route
+
+> 🎯 **Success criterion:** you can visit `localhost:5050/hello-world`, `localhost:5050/ponies/random` and `localhost:5050/history` in the browser, with the expected behaviour below.
+
+> ⚠️ Restart your server for changes to come into effect. Once you have started your server, any changes you make to its source code are not taken into consideration until the next time you (re)start the server. Alternatively, instead of running the server with `yarn start` (which uses `ts-node`), you can run the server with the `start:dev` script which we've added - it uses `ts-node-dev` to watch the source code and automatically restart it when there are changes.
 
 ### `/hello-world`
 
@@ -79,7 +103,7 @@ Says hello world
 
 ### `/ponies/random`
 
-Shows a random pony
+Shows a _single_ random pony from `ponies.json`
 
 ### `/history`
 
