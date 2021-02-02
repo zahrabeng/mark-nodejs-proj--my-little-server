@@ -1,6 +1,6 @@
 import express from "express";
-import ponyData from "./ponies.json";
-import { seasonOneEpisodes } from "../episodes";
+import ponyData from "../ponies.json";
+import { seasonOneEpisodes } from "./episodes";
 
 const app = express();
 const serverStartDate = new Date();
