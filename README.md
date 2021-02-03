@@ -89,7 +89,19 @@ If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), y
 1. Install `snap` with [a (long) one-liner](https://www.bonusbits.com/wiki/HowTo:Install_Snap_on_Amazon_Linux_Workspace#One_Liner)
 2. Run `sudo snap install postman`
 
-### Sending a get request
+### Sending requests with Postman
+
+Read and follow [this guide from Postman](https://learning.postman.com/docs/getting-started/sending-the-first-request/) on sending requests.
+
+Don't worry too much right now about the different types of requests - we're focusing on `GET` requests (which is why there is `app.get` all over the place in `server.ts`, to handle GET requests).
+
+Once you've made your first `GET` request as per the Postman docs, try making `GET` requests to some of the following:
+
+- `localhost:4000`
+- `localhost:4000/hits`
+- `localhost:4000/hits-stealth`
+
+etc
 
 ## Exercise 4: Writing your own Express route
 
