@@ -157,7 +157,7 @@ Then the response should be something like:
 
 (where `/um-what-is-this` is ignored, because it isn't a defined server endpoint)
 
-## Exercise 4: Check your understanding
+## Exercise 5: Check your understanding
 
 > 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
 
@@ -165,6 +165,6 @@ Talk to a member of Faculty about your understanding of the game and of TypeScri
 
 Amend your notes for any important points that come out of the conversation.
 
-## Exercise 5: Commentary and reflection
+## Exercise 6: Commentary and reflection
 
 **Success criterion:** documented reflections.
