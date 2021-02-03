@@ -93,7 +93,7 @@ If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), y
 
 Read and follow [this guide from Postman](https://learning.postman.com/docs/getting-started/sending-the-first-request/) on sending requests.
 
-Don't worry too much right now about the different types of requests - we're focusing on `GET` requests (which is why there is `app.get` all over the place in `server.ts`, to handle GET requests).
+Don't worry too much right now about the different types of requests - we're focusing on `GET` requests (which is why there is `app.get` all over the place in `server.ts`, to handle GET requests). (If you want to read ahead, [MDN has some good docs on HTTP request types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).)
 
 Once you've made your first `GET` request as per the Postman docs, try making `GET` requests to some of the following:
 
