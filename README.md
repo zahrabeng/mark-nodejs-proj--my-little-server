@@ -107,19 +107,55 @@ etc
 
 > 🎯 **Success criterion:** you can visit `localhost:5050/hello-world`, `localhost:5050/ponies/random` and `localhost:5050/history` in the browser, with the expected behaviour below.
 
+Now, you're going to try making changes to the server - in particular, you're going to try adding some endpoints of your own.
+
 > ⚠️ Restart your server for changes to come into effect. Once you have started your server, any changes you make to its source code are not taken into consideration until the next time you (re)start the server. Alternatively, instead of running the server with `yarn start` (which uses `ts-node`), you can run the server with the `start:dev` script which we've added - it uses `ts-node-dev` to watch the source code and automatically restart it when there are changes.
 
 ### `/hello-world`
 
-Says hello world
+Should respond with the following JSON data:
+
+```json
+{
+  "english": "Hello world!",
+  "esperanto": "Saluton mondo!",
+  "hawaiian": "Aloha Honua",
+  "turkish": "Merhaba Dünya!"
+}
+```
 
 ### `/ponies/random`
 
-Shows a _single_ random pony from `ponies.json`
+Shows a _single_ random pony from `ponies.json`. It should be possible to hit the route twice and get back two different ponies.
 
 ### `/history`
 
-Shows a list of which routes have been hit in chronological order
+Shows a list of which (active) routes have been hit in chronological order.
+
+For example, if you visited the following routes after starting your server:
+
+- `/ponies`
+- `/hits`
+- `/history`
+- `/um-what-is-this`
+- `/`
+- `/history`
+
+Then the response should be something like:
+
+```js
+{
+  "routes": [
+    "/ponies",
+    "/hits",
+    "/history",
+    "/",
+    "/history"
+  ]
+}
+```
+
+(where `/um-what-is-this` is ignored, because it isn't a defined server endpoint)
 
 ## Exercise 4: Check your understanding
 
