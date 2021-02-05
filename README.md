@@ -57,7 +57,17 @@ The `start` script is configured such that the Express server will run by defaul
 
 You will need to manually confirm this through visiting `localhost:4000` in your browser. You can also visit some different endpoints which are defined, e.g. `localhost:4000/current-time`.
 
-You can close the server with `Ctrl + C` in the terminal where it is running. (If the server is not running - either because you have not yet started it or you have closed it - then trying to access `localhost:4000` will give you a connection failure.)
+(If the server is not running - either because you have not yet started it or you have closed it - then trying to access `localhost:4000` will give you a connection failure.)
+
+## Exercise 1b: Stopping and restarting the server
+
+Close the server with `Ctrl + C` in the terminal where it is running.
+
+Restart it using the same command as before:
+
+```bash
+yarn start
+```
 
 ## Exercise 2: Reading, understanding and documenting
 
