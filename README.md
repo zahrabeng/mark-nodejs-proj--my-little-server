@@ -36,7 +36,7 @@ We're now going to run your first server and play around with a few existing **e
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
 ```bash
-cd ~/Development/Academy/Mark/fundamentals # or wherever you're organising everything
+cd ~/Development/Academy # or wherever you're organising everything
 git clone https://github.com/WeAreAcademy/my-little-server.git my-little-server
 ```
 
