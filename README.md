@@ -25,9 +25,9 @@ We're now going to run your first server and play around with a few existing **e
 - Run an Express server locally
 - Send back a JSON response in an Express route handler
 - Identify when a route handler function is executed
-- Test GET requests in the browser
-- Test GET requests in Postman
-- Test GET requests with supertest
+- Test HTTP GET requests in the browser
+- Test HTTP GET requests in Postman
+- Test HTTP GET requests with supertest
 
 ## Exercise 1: Installing and running
 
