@@ -1,5 +1,5 @@
 import express from "express";
-import ponyData from "../ponies.json";
+import ponyData from "../data/ponies.json";
 import { seasonOneEpisodes } from "./episodes";
 
 const app = express();
