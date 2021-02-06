@@ -80,7 +80,7 @@ yarn start
 3. Experiment with changing things
 4. Produce a narrative document
 
-A good narrative document for this game would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
+A good narrative document for this program would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
 
 (Some routes will give you back the same response each time, and others won't. Why is that?)
 
@@ -171,7 +171,7 @@ Then the response should be something like:
 
 > 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
 
-Talk to a member of Faculty about your understanding of the game and of TypeScript.
+Talk to a member of Faculty about your understanding of the server and of TypeScript.
 
 Amend your notes for any important points that come out of the conversation.
 
