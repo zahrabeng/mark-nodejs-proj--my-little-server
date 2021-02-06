@@ -1,6 +1,7 @@
 import express from "express";
 import ponyData from "../data/ponies.json";
 import { seasonOneEpisodes } from "./episodes";
+import { pickRandom } from "./random";
 
 const app = express();
 const serverStartDate = new Date();
@@ -63,11 +64,11 @@ app.get("/season-one", (req, res) => {
 });
 
 app.get("/season-one/random", (req, res) => {
-  const randomIndex = Math.floor(Math.random() * seasonOneEpisodes.length);
 
+  const randomEpisode = pickRandom(seasonOneEpisodes);
   res.json({
     countedAsHit: false,
-    data: seasonOneEpisodes[randomIndex],
+    data: randomEpisode,
   });
 });
 
