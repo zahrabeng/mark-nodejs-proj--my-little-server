@@ -25,9 +25,9 @@ We're now going to run your first server and play around with a few existing **e
 - Run an Express server locally
 - Send back a JSON response in an Express route handler
 - Identify when a route handler function is executed
-- Test GET requests in the browser
-- Test GET requests in Postman
-- Test GET requests with supertest
+- Test HTTP GET requests in the browser
+- Test HTTP GET requests in Postman
+- Test HTTP GET requests with supertest
 
 ## Exercise 1: Installing and running
 
@@ -36,7 +36,7 @@ We're now going to run your first server and play around with a few existing **e
 Firstly, clone this repository to your local machine in some sensible place, for example:
 
 ```bash
-cd ~/Development/Academy/Mark/fundamentals # or wherever you're organising everything
+cd ~/Development/Academy # or wherever you're organising everything
 git clone https://github.com/WeAreAcademy/my-little-server.git my-little-server
 ```
 
@@ -57,7 +57,17 @@ The `start` script is configured such that the Express server will run by defaul
 
 You will need to manually confirm this through visiting `localhost:4000` in your browser. You can also visit some different endpoints which are defined, e.g. `localhost:4000/current-time`.
 
-You can close the server with `Ctrl + C` in the terminal where it is running. (If the server is not running - either because you have not yet started it or you have closed it - then trying to access `localhost:4000` will give you a connection failure.)
+(If the server is not running - either because you have not yet started it or you have closed it - then trying to access `localhost:4000` will give you a connection failure.)
+
+## Exercise 1b: Stopping and restarting the server
+
+Close the server with `Ctrl + C` in the terminal where it is running.
+
+Restart it using the same command as before:
+
+```bash
+yarn start
+```
 
 ## Exercise 2: Reading, understanding and documenting
 
@@ -70,7 +80,7 @@ You can close the server with `Ctrl + C` in the terminal where it is running. (I
 3. Experiment with changing things
 4. Produce a narrative document
 
-A good narrative document for this game would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
+A good narrative document for this program would explain what code gets executed when the server is started, and what code gets executed when different endpoints are hit - and how what you see in your browser (as the server response) either changes / does not change on subsequent requests depending on the route.
 
 (Some routes will give you back the same response each time, and others won't. Why is that?)
 
@@ -161,7 +171,7 @@ Then the response should be something like:
 
 > 🎯 **Success criterion:** a conversation with a Faculty member and amended comments.
 
-Talk to a member of Faculty about your understanding of the game and of TypeScript.
+Talk to a member of Faculty about your understanding of the server and of TypeScript.
 
 Amend your notes for any important points that come out of the conversation.
 
