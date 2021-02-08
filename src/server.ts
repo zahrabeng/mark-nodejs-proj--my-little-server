@@ -64,7 +64,6 @@ app.get("/season-one", (req, res) => {
 });
 
 app.get("/season-one/random", (req, res) => {
-
   const randomEpisode = pickRandom(seasonOneEpisodes);
   res.json({
     countedAsHit: false,
