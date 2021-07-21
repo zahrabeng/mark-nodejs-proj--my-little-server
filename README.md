@@ -89,14 +89,20 @@ A good narrative document for this program would explain what code gets executed
 
 [Postman](https://www.postman.com/) is a commonly-used tool for supporting server endpoint development (sometimes referred to as API development).
 
-### Downloading Postman
+### Downloading and installing Postman
 
 If you are on Windows or MacOS, you can [download the desktop app straightforwardly from the Postman website](https://www.postman.com/downloads/).
 
 If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), you will need to:
 
 1. Install `snap` with [a (long) one-liner](https://www.bonusbits.com/wiki/HowTo:Install_Snap_on_Amazon_Linux_Workspace#One_Liner)
-2. Run `sudo snap install postman`
+2. Run `sudo snap install postman`  
+
+_If you get an error `error: too early for operation, device not yet seeded or device model not acknowledged` you may have to wait a minute or open a new terminal and repeat step 2._
+
+3. Open a new terminal
+4. run the command `postman` _in a new terminal_ to launch the program.
+
 
 ### Sending requests with Postman
 
