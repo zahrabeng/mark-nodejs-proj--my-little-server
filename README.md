@@ -95,7 +95,7 @@ If you are on Windows or MacOS, you can [download the desktop app straightforwar
 
 If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), you will need to:
 
-1. Install `snap` with a one-liner
+1. Install `snap` with a really long one-liner
 ```
 tag_version=v0.1.0 && \
 rpm_version=2.36.3-0 && \
