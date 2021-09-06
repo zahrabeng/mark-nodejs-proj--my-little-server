@@ -95,7 +95,12 @@ If you are on Windows or MacOS, you can [download the desktop app straightforwar
 
 If you are on Amazon Linux (the Linux distribution used by Amazon Workspaces), you will need to:
 
-1. Install `snap` with [a (long) one-liner](https://www.bonusbits.com/wiki/HowTo:Install_Snap_on_Amazon_Linux_Workspace#One_Liner)
+1. Install `snap` with a one-liner `tag_version=v0.1.0 && \
+rpm_version=2.36.3-0 && \
+wget https://github.com/albuild/snap/releases/download/${tag_version}/snap-confine-${rpm_version}.amzn2.x86_64.rpm -P $HOME/Downloads && \
+wget https://github.com/albuild/snap/releases/download/${tag_version}/snapd-${rpm_version}.amzn2.x86_64.rpm -P $HOME/Downloads && \
+sudo yum -y install $HOME/Downloads/snap-confine-${rpm_version}.amzn2.x86_64.rpm $HOME/Downloads/snapd-${rpm_version}.amzn2.x86_64.rpm && \
+sudo systemctl enable --now snapd.socket`
 2. Run `sudo snap install postman`  
 
 _If you get an error `error: too early for operation, device not yet seeded or device model not acknowledged` you may have to wait a minute or open a new terminal and repeat step 2._
