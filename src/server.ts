@@ -71,6 +71,15 @@ app.get("/season-one/random", (req, res) => {
   });
 });
 
+app.get("/hello-world", (req, res) => {
+  res.json({
+    english: "Hello world!",
+    esperanto: "Saluton mondo!",
+    hawaiian: "Aloha Honua",
+    turkish: "Merhaba Dünya!"
+  })
+})
+
 // using 4000 by convention, but could be changed
 const PORT_NUMBER = 4000;
 
